@@ -1,0 +1,36 @@
+mat-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .title {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .spacer {
+    flex: 1 1 auto;
+  }
+
+  .links {
+    display: flex;
+    gap: 20px;
+
+    a {
+      padding: 10px 15px;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      color: #fff;
+      text-decoration: none;
+
+      mat-icon {
+        margin-right: 5px; // Espaçamento entre o ícone e o texto
+      }
+    }
+
+    a:hover{
+      background-color: rgb(75, 75, 245);
+    }
+  }
+}
