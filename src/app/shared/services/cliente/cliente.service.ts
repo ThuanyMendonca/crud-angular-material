@@ -49,7 +49,6 @@ export class ClienteService {
 
     localStorage.setItem(ClienteService.REPO_CLIENTES, JSON.stringify(novaLista));
 
-
   }
 
   private obterStorage() : Cliente[] {

@@ -10,10 +10,11 @@ import { ClienteService } from '../shared/services/cliente/cliente.service';
 import { Cliente } from '../shared/models/cliente';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { CpfPipe } from '../shared/pipes/cpf.pipe';
 
 @Component({
   selector: 'app-consulta',
-  imports: [MatInputModule, MatCardModule, FlexLayoutModule, MatIconModule, FormsModule, MatTableModule, MatButtonModule, CommonModule],
+  imports: [MatInputModule, MatCardModule, FlexLayoutModule, MatIconModule, FormsModule, MatTableModule, MatButtonModule, CommonModule, CpfPipe],
   templateUrl: './consulta.component.html',
   styleUrl: './consulta.component.scss'
 })
@@ -26,7 +27,6 @@ export class ConsultaComponent implements OnInit{
   constructor(
     private clienteService: ClienteService,
     private router: Router
-
   ) { }
 
   ngOnInit(){
