@@ -9,10 +9,11 @@ import { MatButtonModule } from '@angular/material/button';
 import { ClienteService } from '../shared/services/cliente/cliente.service';
 import { Cliente } from '../shared/models/cliente';
 import { Router } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-consulta',
-  imports: [MatInputModule, MatCardModule, FlexLayoutModule, MatIconModule, FormsModule, MatTableModule, MatButtonModule],
+  imports: [MatInputModule, MatCardModule, FlexLayoutModule, MatIconModule, FormsModule, MatTableModule, MatButtonModule, CommonModule],
   templateUrl: './consulta.component.html',
   styleUrl: './consulta.component.scss'
 })
@@ -30,7 +31,6 @@ export class ConsultaComponent implements OnInit{
 
   ngOnInit(){
     this.listaClientes = this.clienteService.pesquisarClientes("");
-    console.log(this.listaClientes);
   }
 
   pesquisar(){
@@ -41,4 +41,12 @@ export class ConsultaComponent implements OnInit{
     this.router.navigate(['/cadastro'], { queryParams: { "id": id } });
   }
 
+  preparaDeletar(cliente: Cliente) {
+    cliente.deletando = true;
+  }
+
+  deletar(cliente: Cliente){
+    this.clienteService.deletar(cliente);
+    this.listaClientes = this.clienteService.pesquisarClientes("");
+  }
 }
