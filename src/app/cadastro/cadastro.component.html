@@ -67,14 +67,21 @@
           </div>
         </mat-card-content>
         <mat-card-actions fxLayoutAlign="end">
-          <button mat-raised-button color="primary" type="submit">
+          <button
+            *ngIf="!atualizando; else atualizarBtn"
+            mat-raised-button
+            color="primary"
+            type="submit"
+          >
             <mat-icon fontIcon="save"></mat-icon>
             Salvar
           </button>
-          <button mat-raised-button color="accent" type="reset">
-            <mat-icon fontIcon="refresh"></mat-icon>
-            Atualizar
-          </button>
+          <ng-template #atualizarBtn>
+            <button mat-raised-button color="accent" type="submit">
+              <mat-icon fontIcon="refresh"></mat-icon>
+              Atualizar
+            </button>
+          </ng-template>
           <button mat-raised-button color="warn" type="button">
             <mat-icon fontIcon="backspace"></mat-icon>
             Limpar

@@ -7,14 +7,14 @@ export class Cliente {
   email?: string;
   dataNascimento?: string;
 
-  // static newCliente(){
-  //   const cliente = new Cliente()
-  //   cliente.id = uuid();
+  static newCliente(){
+    const cliente = new Cliente()
+    cliente.id = uuid();
 
-  //   return cliente;
-  // }
+    return cliente;
+  }
 
   constructor() {
-    this.id = uuid();
+    //this.id = uuid();
   }
 }
