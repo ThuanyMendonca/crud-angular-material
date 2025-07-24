@@ -6,11 +6,11 @@ import { MatIconModule } from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
 import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
-import { ClienteService } from '../shared/services/cliente/cliente.service';
-import { Cliente } from '../shared/models/cliente';
+import { ClienteService } from '../../shared/services/cliente/cliente.service';
+import { Cliente } from '../../shared/models/cliente';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { CpfPipe } from '../shared/pipes/cpf.pipe';
+import { CpfPipe } from '../../shared/pipes/cpf.pipe';
 
 @Component({
   selector: 'app-consulta',

@@ -6,8 +6,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
-import { Cliente } from '../shared/models/cliente';
-import { ClienteService } from '../shared/services/cliente/cliente.service';
+import { Cliente } from '../../shared/models/cliente';
+import { ClienteService } from '../../shared/services/cliente/cliente.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { NgxMaskDirective, provideNgxMask } from 'ngx-mask';
@@ -45,6 +45,10 @@ export class CadastroComponent implements OnInit {
           }
         }
       })
+  }
+
+  carregarUFs(){
+
   }
 
   salvar() {
